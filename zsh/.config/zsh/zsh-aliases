@@ -79,3 +79,10 @@ alias agal='ansible-galaxy list'
 alias agalog='ansible-galaxy login'
 alias agar='ansible-galaxy remove'
 alias agas='ansible-galaxy search'
+
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first'
+alias la='exa -a --color=always --group-directories-first'
+alias ll='exa -l --color=always --group-directories-first' 
+alias lt='exa -aT --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
