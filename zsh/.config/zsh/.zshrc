@@ -37,9 +37,17 @@ zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
 # Plugins
+# Autosuggestions from previous commands
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+# Red/Green for incorrect/correct commands
+#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "zdharma-continuum/fast-syntax-highlighting"
+# Automatically closes delimiters
 zsh_add_plugin "hlissner/zsh-autopair"
+# Calculator with =
+zsh_add_plugin "arzzen/calc.plugin.zsh"
+# Saves Previous SSH-Connections
+zsh_add_plugin "gko/ssh-connect"
 
 # Key-bindings
 bindkey -s '^f' 'zi^M'
