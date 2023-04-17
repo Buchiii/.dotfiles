@@ -1,4 +1,6 @@
 #!/bin/sh
+# HISTORY should show timestamp
+alias history='history -E'
 alias j='z'
 alias f='zi'
 alias g='lazygit'
@@ -79,6 +81,7 @@ alias agar='ansible-galaxy remove'
 alias agas='ansible-galaxy search'
 
 # Changing "ls" to "exa"
+#
 alias ls='exa -al --color=always --group-directories-first --icons'
 alias la='exa -a --color=always --group-directories-first --icons'
 alias ll='exa -l --color=always --group-directories-first --icons' 

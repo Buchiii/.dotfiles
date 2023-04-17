@@ -8,9 +8,6 @@ setopt interactive_comments
 stty stop undef		# Disable ctrl-s to freeze terminal.
 zle_highlight=('paste:none')
 
-# beeping is annoying
-unsetopt BEEP
-
 # completions
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -48,6 +45,8 @@ zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "arzzen/calc.plugin.zsh"
 # Saves Previous SSH-Connections
 zsh_add_plugin "gko/ssh-connect"
+# Adding Additional Coompletions
+zsh_add_plugin "zsh-users/zsh-completions"
 
 # Key-bindings
 bindkey -s '^f' 'zi^M'

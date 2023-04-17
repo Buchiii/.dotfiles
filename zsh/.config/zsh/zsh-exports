@@ -1,12 +1,69 @@
 #!/bin/sh
-# HISTFILE="$XDG_DATA_HOME"/zsh/history
-HISTSIZE=1000000
-SAVEHIST=1000000
+# exports
+# directory /home/user/.local/share/zsh/ needs to exist
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
+# ignore certain commands from being added to the history
+export HISTORY_IGNORE="(cd|ls|ll|exit|clear|cd|top|htop*|history*|rm*|pwd)"
+# number of items for local history
+export HISTSIZE=1000000000
+# also show time of execution of a command
+export HISTTIMEFORMAT="[%F %T] "
+# maximum number of items for the history file
+export SAVEHIST=1000000000
+
+# setopts
+# better concurrent shell history sharing
+setopt APPEND_HISTORY
+# cd foo; cd bar; popd --> in foo again
+setopt AUTO_PUSHD
+# remove the annoying beep
+setopt NO_BEEP
+# better globs
+setopt EXTENDED_GLOB
+# Add Timestamp
+setopt EXTENDED_HISTORY
+# don't fill your history as quickly with junk
+setopt HIST_EXPIRE_DUPS_FIRST
+# no duplicated commands
+setopt HIST_IGNORE_ALL_DUPS
+# don't store blanks
+setopt HIST_IGNORE_SPACE
+# do not save duplicated commands
+setopt HIST_SAVE_NO_DUPS
+# better globs / parameter expansion
+setopt HIST_SUBST_PATTERN
+# reduces blanks
+setopt HIST_REDUCE_BLANKS
+# verifies the history
+setopt HIST_VERIFY
+# immediatly append the command to the history file
+setopt INC_APPEND_HISTORY_TIME
+# interactive comments
+setopt INTERACTIVE_COMMENTS
+# better globs
+setopt KSH_GLOB
+# easier to read job stuff
+setopt LONG_LIST_JOBS
+# sane globbing
+setopt NULL_GLOB
+# fail when the first command in a pipeline fails
+setopt PIPE_FAIL
+# better concurrent shell history sharing
+setopt SHARE_HISTORY
+# confirm on rm
+setopt NO_RM_STAR_SILENT
+# wait on rm to be able to ^C
+setopt RM_STAR_WAIT
+
+# some default variables
 export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.local/share/go/bin:$PATH
-export GOPATH=$HOME/.local/share/go
-export PATH="$HOME/.local/share/neovim/bin":$PATH
 eval "$(zoxide init zsh)"
+#
+
+# References
+# https://www.soberkoder.com/better-zsh-history/
+# https://jdhao.github.io/2021/03/24/zsh_history_setup/
+# https://stackoverflow.com/questions/38549251/histignore-not-working-in-zsh
+# https://gist.github.com/bb010g/379e0788e21fb119b5271fc22a896272
