@@ -1,0 +1,4 @@
+# ctrl + space to accept the current suggestion
+bindkey '^ ' autosuggest-accept
+# ctrl + e to accept and execute the current suggestion
+bindkey '^e' autosuggest-execute
