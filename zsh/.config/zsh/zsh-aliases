@@ -93,3 +93,6 @@ cx() { cd "$@" && ls; }
 
 # modern curl replacement
 alias http='xh'
+
+# better tree output
+alias tree='tre'

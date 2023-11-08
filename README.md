@@ -21,3 +21,5 @@ This repository contains all my configuration files.
 * xh
 * bat
 * ripgrep
+* yt-dlp
+* tre-command
