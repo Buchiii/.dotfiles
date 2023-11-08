@@ -23,3 +23,5 @@ This repository contains all my configuration files.
 * ripgrep
 * yt-dlp
 * tre-command
+* rofi
+* rofi-keepassxc
