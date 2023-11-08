@@ -16,8 +16,8 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Remarkable
-alias remarkable_ssh='ssh root@10.11.99.1'
-alias restream='restream -p'
+#alias remarkable_ssh='ssh root@10.11.99.1'
+#alias restream='restream -p'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
