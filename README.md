@@ -17,3 +17,7 @@ This repository contains all my configuration files.
 * fzf
 * xsel
 * xclip
+* httpie
+* xh
+* bat
+* ripgrep
