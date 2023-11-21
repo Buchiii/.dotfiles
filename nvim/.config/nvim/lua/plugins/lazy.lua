@@ -17,6 +17,16 @@ vim.o.termguicolors = true
 
 require("lazy").setup({
   {
+    "rcarriga/nvim-notify",
+    config = function()
+      require("notify").setup({
+        background_colour = "#000000",
+        enabled = false,
+      })
+    end
+  },
+  -- Nicer Command Line for neovim
+  {
     "folke/noice.nvim",
     config = function()
       require("noice").setup({
@@ -47,4 +57,22 @@ require("lazy").setup({
       "rcarriga/nvim-notify",
     }
   },
+  'tpope/vim-dadbod',
+  'kristijanhusak/vim-dadbod-ui',
+  'kristijanhusak/vim-dadbod-completion',
+  -- Database
+  {
+    "tpope/vim-dadbod",
+    opt = true,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    requires = {
+      "kristijanhusak/vim-dadbod-ui",
+      "kristijanhusak/vim-dadbod-completion",
+    },
+    config = function()
+      require("plugins.dadbod").setup()
+    end,
+  },
+  -- theme
+  { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
 })
