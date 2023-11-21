@@ -57,6 +57,7 @@ require("lazy").setup({
       "rcarriga/nvim-notify",
     }
   },
+
   'tpope/vim-dadbod',
   'kristijanhusak/vim-dadbod-ui',
   'kristijanhusak/vim-dadbod-completion',
@@ -73,10 +74,24 @@ require("lazy").setup({
       require("plugins.dadbod").setup()
     end,
   },
+
   -- theme
   { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
+
   -- Fancier statusline
   'nvim-lualine/lualine.nvim', 
+
   -- Fuzzy Finder
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+
+  -- Highlight, edit, and navigate code
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = function()
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
+    end,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    }
+  },
 })
