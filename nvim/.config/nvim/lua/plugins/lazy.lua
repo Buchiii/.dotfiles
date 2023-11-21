@@ -75,4 +75,8 @@ require("lazy").setup({
   },
   -- theme
   { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
+  -- Fancier statusline
+  'nvim-lualine/lualine.nvim', 
+  -- Fuzzy Finder
+  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
 })
