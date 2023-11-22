@@ -16,6 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.o.termguicolors = true
 
 require("lazy").setup({
+  -- theme
+  { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
+
   {
     "rcarriga/nvim-notify",
     config = function()
@@ -74,9 +77,6 @@ require("lazy").setup({
       require("plugins.dadbod").setup()
     end,
   },
-
-  -- theme
-  { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
 
   -- Fancier statusline
   'nvim-lualine/lualine.nvim', 
