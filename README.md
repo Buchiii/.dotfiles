@@ -25,3 +25,10 @@ This repository contains all my configuration files.
 * tre-command
 * rofi
 * rofi-keepassxc
+* dust
+* sd
+* dog
+* ncdu
+* duf
+* jqp
+* nvim
