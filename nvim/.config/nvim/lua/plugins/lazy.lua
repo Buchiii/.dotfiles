@@ -131,6 +131,7 @@ require("lazy").setup({
       -- optional for floating window border decoration
       dependencies = { { 'nvim-lua/plenary.nvim'}}
   },
+
   -- which-key
   {
   "folke/which-key.nvim",
@@ -145,6 +146,7 @@ require("lazy").setup({
     -- refer to the configuration section below
   }
   },
+
   -- Better Tabs for Buffers
   {'romgrk/barbar.nvim',
     dependencies = {
@@ -160,6 +162,8 @@ require("lazy").setup({
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
+
+  -- nvim-tree
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -170,5 +174,8 @@ require("lazy").setup({
     config = function()
       require("nvim-tree").setup {}
     end,
-  }
+  },
+
+  -- toggleterm
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
 })
