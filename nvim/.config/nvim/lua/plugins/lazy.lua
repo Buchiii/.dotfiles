@@ -160,4 +160,15 @@ require("lazy").setup({
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
+  }
 })

@@ -79,11 +79,25 @@ local opts = {
 }
 
 local mappings = {
+
+  -- nvim-tree
+  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  -- hide searches
+  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  -- getting out of files
+  ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["q"] = { "<cmd>q!<CR>", "Quit" },
+
+  -- mostly telescope
   f = {
     name = "Files",
+    b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
     f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
+    g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
+    h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
   },
 
+  -- git
   g = {
     name = "Git",
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
