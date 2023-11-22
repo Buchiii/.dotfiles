@@ -112,4 +112,23 @@ require("lazy").setup({
     'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
+
+  -- Dashbaord
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+      }
+    end,
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  },
+
+  --lazygit
+  {
+      "kdheepak/lazygit.nvim",
+      -- optional for floating window border decoration
+      dependencies = { { 'nvim-lua/plenary.nvim'}}
+  },
 })
