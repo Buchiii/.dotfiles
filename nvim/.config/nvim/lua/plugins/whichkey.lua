@@ -88,6 +88,13 @@ local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
 
+  -- comments
+  c = {
+    name = "Comments",
+    n = { "<cmd>lua require('todo-comments').jump_next()<cr>", "Next Comment" },
+    p = { "<cmd>lua require('todo-comments').jump_prev()<cr>", "Previous Comment" },
+  },
+
   -- mostly telescope
   f = {
     name = "Files",
@@ -114,7 +121,7 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-  
+
   -- trouble
   x = {
     name = "Trouble",

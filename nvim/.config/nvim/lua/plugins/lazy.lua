@@ -15,6 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 -- Fixes Notify opacity issues
 vim.o.termguicolors = true
 
+-- TODO: find more plugins
+
 require("lazy").setup({
   -- theme
   { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
@@ -189,4 +191,15 @@ require("lazy").setup({
     config = function()
     end
   },
+
+  -- better comments
+  {
+  "folke/todo-comments.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+  }
 })
