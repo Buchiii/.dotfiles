@@ -110,6 +110,7 @@ require('lspconfig').luau_lsp.setup {
 }
 --
 -- nvim-cmp setup
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 
@@ -155,6 +156,11 @@ cmp.setup {
     { name = "neorg" },
   },
 }
+
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'sh',
