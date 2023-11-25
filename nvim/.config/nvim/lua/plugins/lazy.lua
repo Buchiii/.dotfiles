@@ -175,4 +175,9 @@ require("lazy").setup({
 
   -- toggleterm
   {'akinsho/toggleterm.nvim', version = "*", config = true},
+
+  -- surround
+  'tpope/vim-surround',
+  -- transparency
+  'xiyaowong/transparent.nvim',
 })
