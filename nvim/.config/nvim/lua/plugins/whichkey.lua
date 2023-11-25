@@ -103,7 +103,7 @@ local mappings = {
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
   },
 
-  --toggleterm
+  -- toggleterm
    t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -114,6 +114,17 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  
+  -- trouble
+  x = {
+    name = "Trouble",
+    x = { "<cmd>TroubleToggle<cr>", "Toggle" },
+    w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
+    d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
+    l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
+    q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+    r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
+  }
 }
 
 which_key.setup(setup)
