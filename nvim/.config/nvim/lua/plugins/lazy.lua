@@ -113,14 +113,11 @@ require("lazy").setup({
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
 
-  -- Dashbaord
+  -- Dashboard
   {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
     config = function()
-      require('dashboard').setup {
-        -- config
-      }
     end,
     dependencies = { {'nvim-tree/nvim-web-devicons'}}
   },
