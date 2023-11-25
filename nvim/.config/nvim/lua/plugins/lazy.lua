@@ -209,4 +209,12 @@ require("lazy").setup({
   event = "InsertEnter",
   opts = {} -- this is equalent to setup({}) function
   },
+
+  -- Git Signs
+  {
+  'lewis6991/gitsigns.nvim',
+  config = function ()
+    require('gitsigns').setup()
+  end
+  }
 })
