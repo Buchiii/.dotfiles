@@ -88,6 +88,16 @@ local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
 
+  -- Angry Reviewer
+  a = {
+    name = "AngryReviwer",
+    r = { "<cmd>AngryReviewer<cr>", "AngryReviewer" },
+    n = { "<cmd>cnext<cr>", "Next"},
+    p = { "<cmd>cprev<cr>", "Previous"},
+    c = { "<cmd>cclose<cr>", "Close"},
+    o = { "<cmd>copen<cr>", "Open"},
+  },
+
   -- comments
   c = {
     name = "Comments",
