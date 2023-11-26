@@ -243,4 +243,26 @@ require("lazy").setup({
 
   -- Angry Reviewer - suggestions for better writing
   'anufrievroman/vim-angry-reviewer',
+
+  -- Show correct Identation
+  -- WARNING: Does not seaem to work
+  'Bekaboo/deadcolumn.nvim',
+
+  -- TODO: Configuration
+  -- Translation
+  'potamides/pantran.nvim',
+
+  -- Scrollbar
+  'petertriho/nvim-scrollbar',
+
+  -- minimap
+  -- TODO: configure keybindings
+  {
+  'gorbit99/codewindow.nvim',
+  config = function()
+    local codewindow = require('codewindow')
+    codewindow.setup()
+    codewindow.apply_default_keybinds()
+  end,
+  }
 })
