@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.o.termguicolors = true
 
 -- TODO: find more plugins
+-- WARNING: lazygit lagging - find a solution
 
 require("lazy").setup({
   -- theme
@@ -216,5 +217,27 @@ require("lazy").setup({
   config = function ()
     require('gitsigns').setup()
   end
-  }
+  },
+
+  -- Neorg - Alternative to org mode
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/Documents/notes",
+              },
+            },
+          },
+        },
+      }
+    end,
+   },
 })
