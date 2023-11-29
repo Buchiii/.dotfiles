@@ -267,6 +267,7 @@ require("lazy").setup({
   },
 
   -- Snippets for Many different things
+  -- TODO: Add Snippets for Ansible, Puppet, Latex, etc...
   {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
@@ -274,5 +275,15 @@ require("lazy").setup({
 	-- install jsregexp (optional!).
 	build = "make install_jsregexp",
   dependencies = { "rafamadriz/friendly-snippets" },
+  },
+
+  -- Email client
+  -- TODO: not working yet
+  {
+  url = "https://git.sr.ht/%7Esoywod/himalaya-vim",
+  config = function ()
+    vim.g.himalaya_executable = "/usr/bin/himalaya"
+    vim.g.himalaya_folder_picker = 'telescope'
+  end,
   },
 })

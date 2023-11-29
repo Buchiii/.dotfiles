@@ -1,0 +1,12 @@
+{
+  "apt": {
+    "prefix": "apt"
+    "body": [
+      "name: apt | Install packages",
+      "apt:",
+      "  name: "
+      "    - ${1:package}"
+    ]
+    "description": "apt"
+  }
+}
