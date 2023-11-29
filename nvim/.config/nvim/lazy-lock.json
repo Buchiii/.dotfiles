@@ -9,6 +9,7 @@
   "fidget.nvim": { "branch": "main", "commit": "a1493d94ecb3464ab3ae4d5855765310566dace4" },
   "friendly-snippets": { "branch": "main", "commit": "53d3df271d031c405255e99410628c26a8f0d2b0" },
   "gitsigns.nvim": { "branch": "main", "commit": "5fc573f2d2a49aec74dd6dc977e8b137429d1897" },
+  "himalaya-vim": { "branch": "master", "commit": "17afaa93586d703d60f16ca420f6a626b2479d73" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lazygit.nvim": { "branch": "main", "commit": "de35012036d43bca03628d40d083f7c02a4cda3f" },
   "lualine.nvim": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },

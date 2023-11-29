@@ -32,3 +32,4 @@ This repository contains all my configuration files.
 * duf
 * jqp
 * nvim
+* himalaya
