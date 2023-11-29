@@ -112,6 +112,7 @@ local mappings = {
     f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
     g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
     h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
+    n = { "<cmd>Telescope notify<cr>", "Notifications"},
   },
 
   -- git

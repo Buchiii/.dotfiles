@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.o.termguicolors = true
 
 -- TODO: find more plugins
--- WARNING: lazygit lagging - find a solution
 
 require("lazy").setup({
   -- theme
@@ -126,6 +125,7 @@ require("lazy").setup({
   },
 
   -- Lazygit
+  -- WARNING: lazygit lagging - find a solution
   {
       "kdheepak/lazygit.nvim",
       -- optional for floating window border decoration

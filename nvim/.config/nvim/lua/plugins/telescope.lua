@@ -31,5 +31,7 @@ require('telescope').setup{
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
+-- Eanble notify extension
+pcall(require('telescope').load_extension, 'notify')
 
 local builtin = require('telescope.builtin')
