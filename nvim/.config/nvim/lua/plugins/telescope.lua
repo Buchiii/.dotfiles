@@ -33,5 +33,9 @@ require('telescope').setup{
 pcall(require('telescope').load_extension, 'fzf')
 -- Eanble notify extension
 pcall(require('telescope').load_extension, 'notify')
+-- Enable telescope luasnip
+pcall(require('telescope').load_extension, 'luasnip')
+-- Enable telescope tmux
+pcall(require('telescope').load_extension, 'luasnip')
 
 local builtin = require('telescope.builtin')

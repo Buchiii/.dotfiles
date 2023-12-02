@@ -87,9 +87,6 @@ require("lazy").setup({
   { 'nvim-telescope/telescope.nvim', 
   branch = '0.1.x', 
   dependencies = { 'nvim-lua/plenary.nvim' },
-  config =function ()
-    require('telescope').load_extension('luasnip')
-  end
   },
 
   -- Highlight, edit, and navigate code
@@ -298,4 +295,9 @@ require("lazy").setup({
   "benfowler/telescope-luasnip.nvim",
   module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
   },
+
+  -- Telescope Plugin for tmux
+  {
+  "camgraff/telescope-tmux.nvim",
+  }
 })
