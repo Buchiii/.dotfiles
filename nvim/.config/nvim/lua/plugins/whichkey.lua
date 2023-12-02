@@ -125,8 +125,8 @@ local mappings = {
   -- mail / himalaya
   m = {
     name = "Mail",
-    c = { "<cmd>HimalayaCopy", "Copy Mail" },
-    m = { "<cmd>HimalayaMove", "Move Mail" },
+    c = { "<cmd>HimalayaCopy<cr>", "Copy Mail" },
+    m = { "<cmd>HimalayaMove<cr>", "Move Mail" },
     n = { "<cmd>HimalayaNextPage<cr>", "Next Page"},
     p = { "<cmd>HimalayaPreviousPage<cr>", "Previous Page"},
     g = { "<cmd>HimalayaFolders<cr>", "Folders" },
