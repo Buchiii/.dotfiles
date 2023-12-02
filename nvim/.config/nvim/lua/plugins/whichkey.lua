@@ -109,6 +109,7 @@ local mappings = {
   f = {
     name = "Files",
     b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
+    c = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
     f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
     g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
     h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
@@ -119,6 +120,22 @@ local mappings = {
   g = {
     name = "Git",
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
+  },
+
+  -- mail / himalaya
+  m = {
+    name = "Mail",
+    c = { "<cmd>HimalayaCopy", "Copy Mail" },
+    m = { "<cmd>HimalayaMove", "Move Mail" },
+    n = { "<cmd>HimalayaNextPage<cr>", "Next Page"},
+    p = { "<cmd>HimalayaPreviousPage<cr>", "Previous Page"},
+    g = { "<cmd>HimalayaFolders<cr>", "Folders" },
+    w = { "<cmd>HimalayaWrite<cr>" , "Write Mail" },
+    r = { "<cmd>HimalayaReply<cr>", "Reply" },
+    R = { "<cmd>HimalayaReplyAll<cr>", "Reply All" },
+    f = { "<cmd>HimalayaForward<cr>", "Forward" },
+    a = { "<cmd>HimalayaAttachments<cr>", "Download Attachments" },
+    D = { "<cmd>HimalayaDelete<cr>", "Delete Mail" },
   },
 
   -- toggleterm
