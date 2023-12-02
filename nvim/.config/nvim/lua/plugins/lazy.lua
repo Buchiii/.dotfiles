@@ -84,7 +84,13 @@ require("lazy").setup({
   'nvim-lualine/lualine.nvim', 
 
   -- Fuzzy Finder
-  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'nvim-telescope/telescope.nvim', 
+  branch = '0.1.x', 
+  dependencies = { 'nvim-lua/plenary.nvim' },
+  config =function ()
+    require('telescope').load_extension('luasnip')
+  end
+  },
 
   -- Highlight, edit, and navigate code
   {
@@ -284,5 +290,12 @@ require("lazy").setup({
     vim.g.himalaya_executable = "/usr/bin/himalaya"
     vim.g.himalaya_folder_picker = 'telescope'
   end,
+  },
+
+
+  -- Telescope Plugin for luasnip
+  {
+  "benfowler/telescope-luasnip.nvim",
+  module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
   },
 })

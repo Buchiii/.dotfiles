@@ -138,6 +138,12 @@ local mappings = {
     D = { "<cmd>HimalayaDelete<cr>", "Delete Mail" },
   },
 
+  -- snippets
+  s = {
+    name = "Snippets",
+    s = { "<cmd>Telescope luasnip<cr>", "Search" },
+  },
+
   -- toggleterm
    t = {
     name = "Terminal",
