@@ -278,7 +278,6 @@ require("lazy").setup({
   },
 
   -- Email client
-  -- TODO: not working yet
   {
   url = "https://git.sr.ht/%7Esoywod/himalaya-vim",
   config = function ()
