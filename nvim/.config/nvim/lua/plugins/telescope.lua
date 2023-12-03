@@ -37,5 +37,7 @@ pcall(require('telescope').load_extension, 'notify')
 pcall(require('telescope').load_extension, 'luasnip')
 -- Enable telescope tmux
 pcall(require('telescope').load_extension, 'luasnip')
+-- Enable telescop repo finder
+pcall(require'telescope'.load_extension, 'repo')
 
 local builtin = require('telescope.builtin')

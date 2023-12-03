@@ -107,13 +107,17 @@ local mappings = {
 
   -- mostly telescope
   f = {
-    name = "Files",
+    name = "Telescope",
     b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
     c = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
     f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
     g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
     h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
-    n = { "<cmd>Telescope notify<cr>", "Notifications"},
+    n = { "<cmd>Telescope notify<cr>", "Notifications" },
+    r = { "<cmd>Telescope repo<cr>", "Repositories" },
+    s = { "<cmd>Telescope tmux sessions<cr>", "Tmux Sessions" },
+    w = { "<cmd>Telescope tmux windows<cr>", "Tmux windows" },
+    p = { "<cmd>Telescope tmux pane_contents<cr>", "Tmux Panes" },
   },
 
   -- git
@@ -154,9 +158,6 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-    s = { "<cmd>Telescope tmux sessions<cr>", "Tmux Sessions" },
-    w = { "<cmd>Telescope tmux windows<cr>", "Tmux windows" },
-    p = { "<cmd>Telescope tmux pane_contents<cr>", "Tmux Panes" },
   },
 
   -- trouble

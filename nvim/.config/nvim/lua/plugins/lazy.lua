@@ -299,5 +299,10 @@ require("lazy").setup({
   -- Telescope Plugin for tmux
   {
   "camgraff/telescope-tmux.nvim",
-  }
+  },
+
+  -- Telescope Plugin for finding repos
+  {
+  "cljoly/telescope-repo.nvim"
+  },
 })
