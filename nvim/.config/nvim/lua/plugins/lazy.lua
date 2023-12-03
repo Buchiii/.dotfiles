@@ -310,4 +310,14 @@ require("lazy").setup({
   {
     "angkeith/telescope-terraform-doc.nvim",
   },
+
+  -- Telescope Plugin for cheat.sh
+  -- NOTE: ~/.local/share/nvim/databases has to be created
+  {
+  "nvim-telescope/telescope-cheat.nvim",
+  dependencies = {
+      "kkharji/sqlite.lua",
+      "nvim-telescope/telescope.nvim"
+    }
+  },
 })

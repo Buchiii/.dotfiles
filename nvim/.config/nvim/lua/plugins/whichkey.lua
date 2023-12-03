@@ -109,7 +109,9 @@ local mappings = {
   f = {
     name = "Telescope",
     b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
-    c = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
+    c = { "<cmd>Telescope cheat fd<cr>", "cheat.sh"},
+    R = { "<cmd>Telescope cheat Recache<cr>", "cheat.sh recache"},
+    C = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
     f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
     g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
     h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
@@ -121,7 +123,7 @@ local mappings = {
     t = { "<cmd>Telescope terraform_doc<cr>", "Terraform" },
     m = { "<cmd>Telescope terraform_doc modules<cr>", "Terraform Modules" },
     a = { "<cmd>Telescope terraform_doc full_name=hashicorp/aws<cr>", "Terraform AWS" },
-    g = { "<cmd>Telescope terraform_doc full_name=hashicorp/google<cr>", "Terraform AWS" },
+    G = { "<cmd>Telescope terraform_doc full_name=hashicorp/google<cr>", "Terraform AWS" },
     k = { "<cmd>Telescope terraform_doc full_name=hashicorp/kubernetes<cr>", "Terraform AWS" },
   },
 

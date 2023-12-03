@@ -26,6 +26,12 @@ require('telescope').setup{
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+    terraform_doc = {
+      url_open_command = "xdg-open",
+      latest_provider_symbol = "  ",
+      wincmd = "botright vnew",
+      wrap = "nowrap",
+    }
   }
 }
 
@@ -37,21 +43,12 @@ pcall(require('telescope').load_extension, 'notify')
 pcall(require('telescope').load_extension, 'luasnip')
 -- Enable telescope tmux
 pcall(require('telescope').load_extension, 'luasnip')
--- Enable telescop repo finder
+-- Enable telescope repo finder
 pcall(require'telescope'.load_extension, 'repo')
--- Enable telescop terraform
+-- Enable telescope terraform
 pcall(require'telescope'.load_extension, 'terraform_doc')
+-- Enable telescope cheat.sh
+pcall(require'telescope'.load_extension, 'cheat')
+
 
 local builtin = require('telescope.builtin')
-
--- Terraform config
-require("telescope").setup({
-  extensions = {
-    terraform_doc = {
-      url_open_command = "xdg-open",
-      latest_provider_symbol = "  ",
-      wincmd = "botright vnew",
-      wrap = "nowrap",
-    }
-  }
-})
