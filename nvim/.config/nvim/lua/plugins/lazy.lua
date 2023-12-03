@@ -303,6 +303,11 @@ require("lazy").setup({
 
   -- Telescope Plugin for finding repos
   {
-  "cljoly/telescope-repo.nvim"
+  "cljoly/telescope-repo.nvim",
+  },
+
+  -- Telescope Plugin for Terraform
+  {
+    "angkeith/telescope-terraform-doc.nvim",
   },
 })

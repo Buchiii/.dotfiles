@@ -39,5 +39,19 @@ pcall(require('telescope').load_extension, 'luasnip')
 pcall(require('telescope').load_extension, 'luasnip')
 -- Enable telescop repo finder
 pcall(require'telescope'.load_extension, 'repo')
+-- Enable telescop terraform
+pcall(require'telescope'.load_extension, 'terraform_doc')
 
 local builtin = require('telescope.builtin')
+
+-- Terraform config
+require("telescope").setup({
+  extensions = {
+    terraform_doc = {
+      url_open_command = "xdg-open",
+      latest_provider_symbol = "  ",
+      wincmd = "botright vnew",
+      wrap = "nowrap",
+    }
+  }
+})

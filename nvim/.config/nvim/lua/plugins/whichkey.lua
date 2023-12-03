@@ -118,6 +118,11 @@ local mappings = {
     s = { "<cmd>Telescope tmux sessions<cr>", "Tmux Sessions" },
     w = { "<cmd>Telescope tmux windows<cr>", "Tmux windows" },
     p = { "<cmd>Telescope tmux pane_contents<cr>", "Tmux Panes" },
+    t = { "<cmd>Telescope terraform_doc<cr>", "Terraform" },
+    m = { "<cmd>Telescope terraform_doc modules<cr>", "Terraform Modules" },
+    a = { "<cmd>Telescope terraform_doc full_name=hashicorp/aws<cr>", "Terraform AWS" },
+    g = { "<cmd>Telescope terraform_doc full_name=hashicorp/google<cr>", "Terraform AWS" },
+    k = { "<cmd>Telescope terraform_doc full_name=hashicorp/kubernetes<cr>", "Terraform AWS" },
   },
 
   -- git
