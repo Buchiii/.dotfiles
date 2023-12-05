@@ -49,6 +49,8 @@ pcall(require'telescope'.load_extension, 'repo')
 pcall(require'telescope'.load_extension, 'terraform_doc')
 -- Enable telescope cheat.sh
 pcall(require'telescope'.load_extension, 'cheat')
+-- Enable telescope file_browser
+pcall(require("telescope").load_extension, 'file_browser')
 
 
 local builtin = require('telescope.builtin')

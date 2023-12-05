@@ -33,3 +33,4 @@ This repository contains all my configuration files.
 * jqp
 * nvim
 * himalaya
+* sqlite

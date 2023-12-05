@@ -125,6 +125,7 @@ local mappings = {
     a = { "<cmd>Telescope terraform_doc full_name=hashicorp/aws<cr>", "Terraform AWS" },
     G = { "<cmd>Telescope terraform_doc full_name=hashicorp/google<cr>", "Terraform AWS" },
     k = { "<cmd>Telescope terraform_doc full_name=hashicorp/kubernetes<cr>", "Terraform AWS" },
+    B = { "<cmd>Telescope file_browser<cr>", "File Browser" },
   },
 
   -- git
