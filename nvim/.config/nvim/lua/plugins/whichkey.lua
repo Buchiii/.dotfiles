@@ -88,7 +88,7 @@ local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
 
-  -- Angry Reviewer
+  -- Angry Reviewer, AI (ollama/gen.nvim)
   a = {
     name = "AngryReviwer",
     r = { "<cmd>AngryReviewer<cr>", "AngryReviewer" },
@@ -96,6 +96,7 @@ local mappings = {
     p = { "<cmd>cprev<cr>", "Previous"},
     c = { "<cmd>cclose<cr>", "Close"},
     o = { "<cmd>copen<cr>", "Open"},
+    d = { "<cmd>Gen DevOps<cr>", "AI DevOps"},
   },
 
   -- comments
