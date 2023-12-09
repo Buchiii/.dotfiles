@@ -35,3 +35,4 @@ This repository contains all my configuration files.
 * himalaya
 * sqlite
 * luarocks
+* lua51-graphicsmagick-git
