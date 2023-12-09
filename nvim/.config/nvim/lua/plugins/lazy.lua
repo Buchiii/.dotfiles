@@ -326,4 +326,21 @@ require("lazy").setup({
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
+
+  -- hologram.nvim
+  --{
+  --  'edluffy/hologram.nvim',
+  --  config = function()
+  --      require("hologram").setup()
+  --  end,
+
+  --  rocks = { "magick" },
+  --},
+  -- oil.nvim - filesystem editing in a buffer
+  {
+  'stevearc/oil.nvim',
+  opts = {},
+  -- Optional dependencies
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 })
