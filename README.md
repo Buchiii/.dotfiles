@@ -34,3 +34,4 @@ This repository contains all my configuration files.
 * nvim
 * himalaya
 * sqlite
+* luarocks
