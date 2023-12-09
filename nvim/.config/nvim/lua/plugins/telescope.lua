@@ -31,7 +31,14 @@ require('telescope').setup{
       latest_provider_symbol = "  ",
       wincmd = "botright vnew",
       wrap = "nowrap",
-    }
+    },
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      -- find command (defaults to `fd`)
+      find_cmd = "rg"
+    },
   }
 }
 
