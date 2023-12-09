@@ -51,6 +51,7 @@ pcall(require'telescope'.load_extension, 'terraform_doc')
 pcall(require'telescope'.load_extension, 'cheat')
 -- Enable telescope file_browser
 pcall(require("telescope").load_extension, 'file_browser')
-
+-- Enable media files search
+pcall(require("telescope").load_extension, 'media_files')
 
 local builtin = require('telescope.builtin')

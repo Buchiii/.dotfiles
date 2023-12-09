@@ -342,5 +342,11 @@ require("lazy").setup({
   opts = {},
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
+  -- image preview in telescope
+  {
+  'nvim-telescope/telescope-media-files.nvim',
+  dependencies = { "nvim-lua/popup.nvim" },
   }
 })
