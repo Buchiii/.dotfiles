@@ -235,7 +235,7 @@ require("lazy").setup({
           ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
               workspaces = {
-                notes = "~/Documents/notes",
+                notes = "~/Documents/neorg",
               },
             },
           },
