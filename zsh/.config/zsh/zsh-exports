@@ -56,7 +56,7 @@ setopt NO_RM_STAR_SILENT
 setopt RM_STAR_WAIT
 
 # some default variables
-export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.local/bin:$HOME/.gem/ruby/3.0.0/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 eval "$(zoxide init zsh)"
