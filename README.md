@@ -36,3 +36,4 @@ This repository contains all my configuration files.
 * sqlite
 * luarocks
 * lua51-graphicsmagick-git
+* flameshot
