@@ -81,11 +81,11 @@ require("lazy").setup({
   },
 
   -- Fancier statusline
-  'nvim-lualine/lualine.nvim', 
+  'nvim-lualine/lualine.nvim',
 
   -- Fuzzy Finder
-  { 'nvim-telescope/telescope.nvim', 
-  branch = '0.1.x', 
+  { 'nvim-telescope/telescope.nvim',
+  branch = '0.1.x',
   dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
@@ -125,14 +125,6 @@ require("lazy").setup({
     config = function()
     end,
     dependencies = { {'nvim-tree/nvim-web-devicons'}}
-  },
-
-  -- Lazygit
-  -- WARNING: lazygit lagging - find a solution
-  {
-      "kdheepak/lazygit.nvim",
-      -- optional for floating window border decoration
-      dependencies = { { 'nvim-lua/plenary.nvim'}}
   },
 
   -- which-key
@@ -327,15 +319,6 @@ require("lazy").setup({
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
 
-  -- hologram.nvim
-  --{
-  --  'edluffy/hologram.nvim',
-  --  config = function()
-  --      require("hologram").setup()
-  --  end,
-
-  --  rocks = { "magick" },
-  --},
   -- oil.nvim - filesystem editing in a buffer
   {
   'stevearc/oil.nvim',
