@@ -339,4 +339,13 @@ require("lazy").setup({
 
   -- indentation
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+
+  -- lazygit
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
 })
