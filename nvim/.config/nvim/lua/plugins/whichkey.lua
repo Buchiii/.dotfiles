@@ -136,6 +136,7 @@ local mappings = {
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
   },
 
+  -- Lazy
   l = {
     name = "Lazy",
     l = { "<cmd>Lazy<cr>", "Lazy" },
@@ -143,7 +144,7 @@ local mappings = {
 
   -- mail / himalaya
   m = {
-    name = "Mail",
+    name = "Mail/Minimap",
     c = { "<cmd>HimalayaCopy<cr>", "Copy Mail" },
     m = { "<cmd>HimalayaMove<cr>", "Move Mail" },
     n = { "<cmd>HimalayaNextPage<cr>", "Next Page"},
@@ -155,6 +156,7 @@ local mappings = {
     f = { "<cmd>HimalayaForward<cr>", "Forward" },
     a = { "<cmd>HimalayaAttachments<cr>", "Download Attachments" },
     D = { "<cmd>HimalayaDelete<cr>", "Delete Mail" },
+    M = { "<cmd>MinimapToggle<cr>", "Minimap Toggle", },
   },
 
   -- snippets

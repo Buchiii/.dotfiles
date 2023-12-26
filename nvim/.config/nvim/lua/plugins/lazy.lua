@@ -244,14 +244,11 @@ require("lazy").setup({
   'petertriho/nvim-scrollbar',
 
   -- minimap
-  -- TODO: configure keybindings
   {
-  'gorbit99/codewindow.nvim',
-  config = function()
-    local codewindow = require('codewindow')
-    codewindow.setup()
-    codewindow.apply_default_keybinds()
-  end,
+    'wfxr/minimap.vim',
+    config = function ()
+      vim.g.minimap_width = 25
+    end
   },
 
   -- Snippets for Many different things
