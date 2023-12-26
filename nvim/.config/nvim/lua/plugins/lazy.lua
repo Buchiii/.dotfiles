@@ -358,4 +358,7 @@ require("lazy").setup({
       require('goto-preview').setup {}
     end
   },
+
+  -- automatically adjusting shiftwidth and expandtab
+  'tpope/vim-sleuth',
 })
