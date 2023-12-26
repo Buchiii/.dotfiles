@@ -308,6 +308,12 @@ require("lazy").setup({
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
 
+  -- Telescope Plugin for Docker
+  "lpoto/telescope-docker.nvim",
+
+  -- Telescope Plugin for Texsuite
+  'cagve/telescope-texsuite',
+
   -- oil.nvim - filesystem editing in a buffer
   {
     'stevearc/oil.nvim',

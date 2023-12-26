@@ -111,6 +111,7 @@ local mappings = {
     name = "Telescope",
     b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
     c = { "<cmd>Telescope cheat fd<cr>", "cheat.sh"},
+    d = { "<cmd>Telescope docker<cr>", "Docker" },
     R = { "<cmd>Telescope cheat Recache<cr>", "cheat.sh recache"},
     C = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
     f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
@@ -139,8 +140,12 @@ local mappings = {
 
   -- Lazy
   l = {
-    name = "Lazy",
+    name = "Lazy/Latex",
     l = { "<cmd>Lazy<cr>", "Lazy" },
+    c = { "<cmd>Telescope texsuite newcommands<cr>", "Tex newcommaneds"},
+    L = { "<cmd>Telescope texsuite labels<cr>", "Tex labels"},
+    h = { "<cmd>Telescope texsuite headings<cr>", "Tex headings"},
+    f = { "<cmd>Telescope texsuite frames<cr>", "Tex Frames"},
   },
 
   -- mail / himalaya

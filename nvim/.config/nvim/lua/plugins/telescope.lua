@@ -60,6 +60,10 @@ pcall(require'telescope'.load_extension, 'cheat')
 pcall(require("telescope").load_extension, 'file_browser')
 -- Enable media files search
 pcall(require("telescope").load_extension, 'media_files')
+-- Enable docker
+pcall(require("telescope").load_extension, 'docker')
+-- Enalbe Texsuite
+pcall(require("telescope").load_extension, 'texsuite')
 
 local builtin = require('telescope.builtin')
 
