@@ -158,9 +158,9 @@ local mappings = {
     s = { "<cmd>Telescope luasnip<cr>", "Search" },
   },
 
-  -- toggleterm tmux
+  -- toggleterm tmux translate
    t = {
-    name = "Terminal/tmux",
+    name = "Terminal/tmux/trnaslate",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
     u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     t = { "<cmd>lua _BTOP_TOGGLE()<cr>", "Btop" },
@@ -169,6 +169,8 @@ local mappings = {
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+    r = { "<cmd>Pantran<cr>", "Pantran" },
+    rr = { "<cmd>Pantran.motion_translate()<cr>", "Pantran" },
   },
 
   -- trouble
