@@ -339,4 +339,7 @@ require("lazy").setup({
 
   -- ollama integration in nvim
   'David-Kunz/gen.nvim',
+
+  -- indentation
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 })
