@@ -87,35 +87,35 @@ require("lazy").setup({
   dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
-  -- Highlight, edit, and navigate code
+-- Highlight, edit, and navigate code
   {
-    'nvim-treesitter/nvim-treesitter',
-    build = function()
-      pcall(require('nvim-treesitter.install').update { with_sync = true })
-    end,
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    }
+  'nvim-treesitter/nvim-treesitter',
+  build = function()
+    pcall(require('nvim-treesitter.install').update { with_sync = true })
+  end,
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  }
   },
- -- LSP Configuration & Plugins
+-- LSP Configuration & Plugins
   {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      -- Automatically install LSPs to stdpath for neovim
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
+  'neovim/nvim-lspconfig',
+  dependencies = {
+    -- Automatically install LSPs to stdpath for neovim
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
 
-      -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
-    }
+    -- Useful status updates for LSP
+    'j-hui/fidget.nvim',
+  }
   },
 
- -- Autocompletion
+-- Autocompletion
   {
     'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
-
+  
   -- Dashboard
   {
     'nvimdev/dashboard-nvim',
@@ -124,36 +124,36 @@ require("lazy").setup({
     end,
     dependencies = { {'nvim-tree/nvim-web-devicons'}}
   },
-
+  
   -- which-key
   {
-  "folke/which-key.nvim",
-  event = "VeryLazy",
-  init = function()
-    vim.o.timeout = true
-    vim.o.timeoutlen = 300
-  end,
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
   },
-
+  
   -- Better Tabs for Buffers
   {'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-    },
-    init = function() vim.g.barbar_auto_setup = false end,
-    opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
-    },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  dependencies = {
+    'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+    'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+  },
+  init = function() vim.g.barbar_auto_setup = false end,
+  opts = {
+    -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+    -- animation = true,
+    -- insert_at_start = true,
+    -- …etc.
+  },
+  version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
 
   -- nvim-tree
@@ -188,28 +188,28 @@ require("lazy").setup({
 
   -- better comments
   {
-  "folke/todo-comments.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
   },
 
   -- autopairs
   {
-  'windwp/nvim-autopairs',
-  event = "InsertEnter",
-  opts = {} -- this is equalent to setup({}) function
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
   },
 
   -- Git Signs
   {
-  'lewis6991/gitsigns.nvim',
-  config = function ()
-    require('gitsigns').setup()
-  end
+    'lewis6991/gitsigns.nvim',
+    config = function ()
+      require('gitsigns').setup()
+    end
   },
 
   -- Neorg - Alternative to org mode
@@ -232,7 +232,7 @@ require("lazy").setup({
         },
       }
     end,
-   },
+  },
 
   -- Angry Reviewer - suggestions for better writing
   'anufrievroman/vim-angry-reviewer',
@@ -253,38 +253,38 @@ require("lazy").setup({
 
   -- Snippets for Many different things
   {
-	"L3MON4D3/LuaSnip",
-	-- follow latest release.
-	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	-- install jsregexp (optional!).
-	build = "make install_jsregexp",
-  dependencies = { "rafamadriz/friendly-snippets" },
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp",
+    dependencies = { "rafamadriz/friendly-snippets" },
   },
 
   -- Email client
   {
-  url = "https://git.sr.ht/%7Esoywod/himalaya-vim",
-  config = function ()
-    vim.g.himalaya_executable = "/usr/bin/himalaya"
-    vim.g.himalaya_folder_picker = 'telescope'
-  end,
+    url = "https://git.sr.ht/%7Esoywod/himalaya-vim",
+    config = function ()
+      vim.g.himalaya_executable = "/usr/bin/himalaya"
+      vim.g.himalaya_folder_picker = 'telescope'
+    end,
   },
 
 
   -- Telescope Plugin for luasnip
   {
-  "benfowler/telescope-luasnip.nvim",
-  module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
+    "benfowler/telescope-luasnip.nvim",
+    module = "telescope._extensions.luasnip",  -- if you wish to lazy-load
   },
 
   -- Telescope Plugin for tmux
   {
-  "camgraff/telescope-tmux.nvim",
+    "camgraff/telescope-tmux.nvim",
   },
 
   -- Telescope Plugin for finding repos
   {
-  "cljoly/telescope-repo.nvim",
+    "cljoly/telescope-repo.nvim",
   },
 
   -- Telescope Plugin for Terraform
@@ -295,8 +295,8 @@ require("lazy").setup({
   -- Telescope Plugin for cheat.sh
   -- NOTE: ~/.local/share/nvim/databases has to be created
   {
-  "nvim-telescope/telescope-cheat.nvim",
-  dependencies = {
+    "nvim-telescope/telescope-cheat.nvim",
+    dependencies = {
       "kkharji/sqlite.lua",
       "nvim-telescope/telescope.nvim"
     }
@@ -310,16 +310,16 @@ require("lazy").setup({
 
   -- oil.nvim - filesystem editing in a buffer
   {
-  'stevearc/oil.nvim',
-  opts = {},
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
   },
 
   -- image preview in telescope
   {
-  'nvim-telescope/telescope-media-files.nvim',
-  dependencies = { "nvim-lua/popup.nvim" },
+    'nvim-telescope/telescope-media-files.nvim',
+    dependencies = { "nvim-lua/popup.nvim" },
   },
 
   -- image preview directly in a file
@@ -327,7 +327,7 @@ require("lazy").setup({
   -- sudo luarocks install magick --lua-version 5.1
   -- copy /root/.luarocks to user folder and chown to user permissions
   {
-  'https://github.com/3rd/image.nvim',
+    'https://github.com/3rd/image.nvim',
   },
 
   -- ollama integration in nvim
@@ -346,5 +346,16 @@ require("lazy").setup({
   },
 
   -- zen for distraction free programming / writing etc.
+  -- with twilight as integration
   'folke/zen-mode.nvim',
+  'folke/twilight.nvim',
+
+  -- preview of definitions
+  -- TODO: understand first b4 using
+  {
+    'rmagatti/goto-preview',
+    config = function ()
+      require('goto-preview').setup {}
+    end
+  },
 })

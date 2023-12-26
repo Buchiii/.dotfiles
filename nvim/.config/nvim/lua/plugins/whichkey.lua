@@ -132,7 +132,8 @@ local mappings = {
 
   -- git
   g = {
-    name = "Git",
+    name = "Git/Goto",
+    d = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
   },
 
