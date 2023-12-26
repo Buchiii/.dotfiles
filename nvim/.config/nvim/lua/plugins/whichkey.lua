@@ -136,6 +136,11 @@ local mappings = {
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
   },
 
+  l = {
+    name = "Lazy",
+    l = { "<cmd>Lazy<cr>", "Lazy" },
+  },
+
   -- mail / himalaya
   m = {
     name = "Mail",
@@ -178,7 +183,7 @@ local mappings = {
     name = "Trouble",
     x = { "<cmd>TroubleToggle<cr>", "Toggle" },
     w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
-    d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
+    d =  { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
     l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
     q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
     r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },

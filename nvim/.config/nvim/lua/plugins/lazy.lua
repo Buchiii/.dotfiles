@@ -237,7 +237,6 @@ require("lazy").setup({
   -- Angry Reviewer - suggestions for better writing
   'anufrievroman/vim-angry-reviewer',
 
-  -- TODO: Configuration
   -- Translation
   'potamides/pantran.nvim',
 
