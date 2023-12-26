@@ -344,4 +344,7 @@ require("lazy").setup({
       "nvim-lua/plenary.nvim",
     },
   },
+
+  -- zen for distraction free programming / writing etc.
+  'folke/zen-mode.nvim',
 })

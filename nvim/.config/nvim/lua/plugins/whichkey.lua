@@ -189,7 +189,12 @@ local mappings = {
     l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
     q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
     r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
-  }
+  },
+
+  z = {
+    name = "Zen",
+    z = { "<cmd>ZenMode<cr>", "ZenMode" },
+  },
 }
 
 which_key.setup(setup)
