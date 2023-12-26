@@ -160,7 +160,7 @@ local mappings = {
 
   -- toggleterm tmux translate
    t = {
-    name = "Terminal/tmux/trnaslate",
+    name = "Terminal/tmux/translate",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
     u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     t = { "<cmd>lua _BTOP_TOGGLE()<cr>", "Btop" },
@@ -169,8 +169,8 @@ local mappings = {
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-    r = { "<cmd>Pantran<cr>", "Pantran" },
-    rr = { "<cmd>Pantran.motion_translate()<cr>", "Pantran" },
+    r = { "<cmd>Pantran<cr>", "Translate" },
+    rr = { "<cmd>Pantran.motion_translate()<cr>", "Translate Selected Text" },
   },
 
   -- trouble
