@@ -15,8 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Fixes Notify opacity issues
 vim.o.termguicolors = true
 
--- TODO: find more plugins
-
 require("lazy").setup({
   -- theme
   { "catppuccin/nvim", as = "catppuccin", priority = 1000 },
@@ -258,7 +256,6 @@ require("lazy").setup({
   },
 
   -- Snippets for Many different things
-  -- TODO: Add Snippets for Ansible, Puppet, Latex, etc...
   {
 	"L3MON4D3/LuaSnip",
 	-- follow latest release.
