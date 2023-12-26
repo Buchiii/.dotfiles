@@ -133,7 +133,7 @@ local mappings = {
   -- git
   g = {
     name = "Git",
-    g = { "<cmd>LazyGit<cr>", "Lazygit" },
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
   },
 
   -- mail / himalaya

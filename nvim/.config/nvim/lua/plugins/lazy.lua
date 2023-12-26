@@ -340,7 +340,7 @@ require("lazy").setup({
   {
   'https://github.com/3rd/image.nvim',
   },
-  
+
   -- ollama integration in nvim
   'David-Kunz/gen.nvim',
 })
