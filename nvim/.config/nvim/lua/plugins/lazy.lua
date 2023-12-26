@@ -239,10 +239,6 @@ require("lazy").setup({
   -- Angry Reviewer - suggestions for better writing
   'anufrievroman/vim-angry-reviewer',
 
-  -- Show correct Identation
-  -- WARNING: Does not seaem to work
-  'Bekaboo/deadcolumn.nvim',
-
   -- TODO: Configuration
   -- Translation
   'potamides/pantran.nvim',
