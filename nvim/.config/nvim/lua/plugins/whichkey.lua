@@ -78,6 +78,8 @@ local opts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
+
+
 local mappings = {
 
   -- nvim-tree
@@ -133,9 +135,23 @@ local mappings = {
 
   -- git
   g = {
-    name = "Git/Goto",
-    d = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
+    name = "Git/Goto/Gitlab",
+    D = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
     g = { "<cmd>LazyGit<cr>", "Lazygit" },
+    r = { "<cmd>lua require('gitlab').review()<cr>", "Review" },
+    c = { "<cmd>lua require('gitlab').create_comment()<cr>", "Create Comment" },
+    C = { "<cmd>lua require('gitlab').create_multiline_comment()<cr>", "Create MultilineComment" },
+    S = { "<cmd>lua require('gitlab').create_comment_suggestion()<cr>", "Create Suggestion" },
+    d = { "<cmd>lua require('gitlab').toggle_discussions()<cr>", "Toggle Discussion" },
+    s = { "<cmd>lua require('gitlab').summary()<cr>", "Gitlab Summary" },
+    a = { "<cmd>lua require('gitlab').approve()<cr>", "Approve" },
+    A = { "<cmd>lua require('gitlab').add_assignee()<cr>", "Add Assignee" },
+    da = { "<cmd>lua require('gitlab').delete_assignee()<cr>", "Delete Assignee" },
+    ar = { "<cmd>lua require('gitlab').add_reviewer()<cr>", "Add Reviewer" },
+    dr = { "<cmd>lua require('gitlab').delete_reviewer()<cr>", "Delete Reviewer" },
+    p = { "<cmd>lua require('gitlab').pipeline()<cr>", "Pipeline" },
+    o = { "<cmd>lua require('gitlab').open_in_browser()<cr>", "Open in Browser" },
+    m = { "<cmd>lua require('gitlab').merge()<cr>", "Merge" },
   },
 
   -- Lazy
