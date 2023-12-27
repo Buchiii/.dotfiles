@@ -152,6 +152,7 @@ local mappings = {
     p = { "<cmd>lua require('gitlab').pipeline()<cr>", "Pipeline" },
     o = { "<cmd>lua require('gitlab').open_in_browser()<cr>", "Open in Browser" },
     m = { "<cmd>lua require('gitlab').merge()<cr>", "Merge" },
+    md = { "<cmd>lua require('gitlab').move_to_discussion_tree_from_diagnostic()<cr>", "Move to Discussion" },
   },
 
   -- Lazy
