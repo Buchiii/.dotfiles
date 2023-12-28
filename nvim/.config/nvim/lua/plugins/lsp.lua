@@ -57,11 +57,20 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'ansiblels', 'arduino_language_server', 'bashls', 'cssls', 'docker_compose_language_service', 'dockerls', 'lua_ls', 'gopls', 'html', 'puppet', 'ruby_ls', 'texlab'  }
+local servers = { 'ansiblels', 'arduino_language_server', 'bashls', 'cssls', 'docker_compose_language_service',
+  'dockerls', 'lua_ls', 'gopls', 'html', 'puppet', 'ruby_ls', 'texlab' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
   ensure_installed = servers,
+}
+
+-- Formatter that should be installed
+local formatters = { 'shellcheck', 'shellharden', 'beautysh', 'bibtex-tidy', 'latexindent', 'stylua', 'puppet-lint',
+  'isort', 'black', 'rubocop', 'rubyfmt', 'sql_formatter', 'sqlfluff', 'yamlfix', 'yamlfmt' }
+-- Ensure Formatters are installed
+require('mason-null-ls').setup {
+  ensure_installed = formatters
 }
 
 -- nvim-cmp supports additional completion capabilities
@@ -116,7 +125,7 @@ local luasnip = require 'luasnip'
 
 cmp.setup {
   view = {
-  	entries = "native"
+    entries = "native"
   },
   snippet = {
     expand = function(args)
