@@ -150,10 +150,15 @@ require("lspconfig").luau_lsp.setup({
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require("lspkind")
 
 cmp.setup({
-	view = {
-		entries = "native",
+	formatting = {
+		format = lspkind.cmp_format({
+			mode = "symbol_text",
+			maxwidth = 50,
+			ellipsis_char = "...",
+		}),
 	},
 	snippet = {
 		expand = function(args)
@@ -193,6 +198,7 @@ cmp.setup({
 		{ name = "neorg" },
 		{ name = "path" },
 		{ name = "plugins" },
+		{ name = "buffer" },
 	},
 })
 
