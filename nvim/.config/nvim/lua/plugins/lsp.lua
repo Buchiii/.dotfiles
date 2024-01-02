@@ -199,6 +199,7 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "plugins" },
 		{ name = "buffer" },
+		{ name = "nvim_lsp_signature_help" },
 	},
 })
 
