@@ -105,9 +105,8 @@ require("lazy").setup({
 			-- Automatically install LSPs to stdpath for neovim
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"jose-elias-alvarez/null-ls.nvim",
-			"jay-babu/mason-null-ls.nvim",
-
+			-- Install or Upgrade third-party tools
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			-- Useful status updates for LSP
 			"j-hui/fidget.nvim",
 		},
