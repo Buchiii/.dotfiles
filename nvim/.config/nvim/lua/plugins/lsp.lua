@@ -192,6 +192,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "neorg" },
 		{ name = "path" },
+		{ name = "plugins" },
 	},
 })
 

@@ -116,6 +116,17 @@ require("lazy").setup({
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip", "hrsh7th/cmp-path" },
+		requires = {
+			{
+				"KadoBOT/cmp-plugins",
+				config = function()
+					require("cmp-plugins").setup({
+						files = { ".*\\.lua" }, -- default
+						-- files = { "plugins.lua", "some_path/plugins/" } -- Recommended: use static filenames or partial paths
+					})
+				end,
+			},
+		},
 	},
 
 	-- Dashboard
