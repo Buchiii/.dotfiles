@@ -316,6 +316,9 @@ require("lazy").setup({
 	-- Telescope Plugin for Texsuite
 	"cagve/telescope-texsuite",
 
+	-- Telescope Plugin for Bibtex
+	"nvim-telescope/telescope-bibtex.nvim",
+
 	-- oil.nvim - filesystem editing in a buffer
 	{
 		"stevearc/oil.nvim",
