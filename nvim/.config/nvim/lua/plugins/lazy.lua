@@ -473,7 +473,7 @@ require("lazy").setup({
 					python = { "isort", "black" },
 					ruby = { "rubocop", "rubyfmt" },
 					sql = { "sql_formatter", "sqlfluff" },
-					yaml = { "yamlfix", "yamlfmt" },
+					yaml = { "yamlfix" },
 				},
 				format_on_save = {
 					lsp_fallback = true,
