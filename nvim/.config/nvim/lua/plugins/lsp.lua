@@ -68,7 +68,7 @@ local servers = {
 	"gopls",
 	"html",
 	"puppet",
-	"ruby_ls",
+	"solargraph",
 	"texlab",
 }
 
