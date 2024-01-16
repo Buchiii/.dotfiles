@@ -471,7 +471,7 @@ require("lazy").setup({
 					lua = { "stylua" },
 					puppet = { "puppet-lint" },
 					python = { "isort", "black" },
-					ruby = { "rubocop", "rubyfmt" },
+					ruby = { "rubyfmt" },
 					sql = { "sql_formatter", "sqlfluff" },
 					yaml = { "yamlfix" },
 				},
