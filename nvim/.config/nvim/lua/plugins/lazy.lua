@@ -520,29 +520,4 @@ require("lazy").setup({
 			})
 		end,
 	},
-
-	-- Obsidian.md
-	{
-		"epwalsh/obsidian.nvim",
-		tag = "*", -- recommended, use latest release instead of latest commit
-		requires = {
-			-- Required.
-			"nvim-lua/plenary.nvim",
-
-			-- see below for full list of optional dependencies 👇
-		},
-		config = function()
-			require("obsidian").setup({
-				workspaces = {
-					{
-						name = "personal",
-						path = "~/Documents/obsidian",
-					},
-				},
-				ui = {
-					enable = false,
-				},
-			})
-		end,
-	},
 })
