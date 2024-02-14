@@ -199,9 +199,6 @@ require("lazy").setup({
 	-- surround
 	"tpope/vim-surround",
 
-	-- transparency
-	"xiyaowong/transparent.nvim",
-
 	-- show all the troubles the code causes
 	{
 		"folke/trouble.nvim",
