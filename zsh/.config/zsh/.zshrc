@@ -49,8 +49,6 @@ zsh_add_plugin "arzzen/calc.plugin.zsh"
 zsh_add_plugin "gko/ssh-connect"
 # Adding Additional Coompletions
 zsh_add_plugin "zsh-users/zsh-completions"
-# Enabling ChatGPT in terminal
-zsh_add_plugin "Leach1m/zsh-ask"
 
 # Key-bindings
 bindkey -s '^f' 'zi^M'
