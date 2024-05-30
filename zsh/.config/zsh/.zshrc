@@ -34,22 +34,6 @@ zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 zsh_add_file "zsh-autosuggestions"
 
-# Plugins
-# Autosuggestions from previous commands
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-# Red/Green for incorrect/correct commands
-#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "zdharma-continuum/fast-syntax-highlighting"
-# Automatically closes delimiters
-zsh_add_plugin "hlissner/zsh-autopair"
-# Calculator with =
-zsh_add_plugin "arzzen/calc.plugin.zsh"
-# Saves Previous SSH-Connections
-zsh_add_plugin "gko/ssh-connect"
-# Adding Additional Coompletions
-zsh_add_plugin "zsh-users/zsh-completions"
-# Add fzf-tab Plugin
-zsh_add_plugin "Aloxaf/fzf-tab"
 
 # Key-bindings
 bindkey -s '^f' 'zi^M'
@@ -63,11 +47,28 @@ bindkey "^j" down-line-or-beginning-search # Down
 bindkey -r "^u"
 bindkey -r "^d"
 
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
-[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+#[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+#[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
+#[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 compinit
+
+# Plugins
+# Add fzf-tab Plugin
+zsh_add_plugin "Aloxaf/fzf-tab"
+# Autosuggestions from previous commands
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+# Red/Green for incorrect/correct commands
+#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "zdharma-continuum/fast-syntax-highlighting"
+# Automatically closes delimiters
+zsh_add_plugin "hlissner/zsh-autopair"
+# Calculator with =
+zsh_add_plugin "arzzen/calc.plugin.zsh"
+# Saves Previous SSH-Connections
+zsh_add_plugin "gko/ssh-connect"
+# Adding Additional Coompletions
+zsh_add_plugin "zsh-users/zsh-completions"
 
 autoload edit-command-line; zle -N edit-command-line
