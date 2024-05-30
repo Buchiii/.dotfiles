@@ -49,6 +49,8 @@ zsh_add_plugin "arzzen/calc.plugin.zsh"
 zsh_add_plugin "gko/ssh-connect"
 # Adding Additional Coompletions
 zsh_add_plugin "zsh-users/zsh-completions"
+# Add fzf-tab Plugin
+zsh_add_plugin "Aloxaf/fzf-tab"
 
 # Key-bindings
 bindkey -s '^f' 'zi^M'
