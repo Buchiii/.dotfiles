@@ -33,7 +33,6 @@ zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 zsh_add_file "zsh-autosuggestions"
-zsh_add_file "zsh-chatgpt"
 
 # Plugins
 # Autosuggestions from previous commands
