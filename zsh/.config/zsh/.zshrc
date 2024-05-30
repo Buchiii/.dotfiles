@@ -64,8 +64,6 @@ zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zdharma-continuum/fast-syntax-highlighting"
 # Automatically closes delimiters
 zsh_add_plugin "hlissner/zsh-autopair"
-# Saves Previous SSH-Connections
-zsh_add_plugin "gko/ssh-connect"
 # Adding Additional Coompletions
 zsh_add_plugin "zsh-users/zsh-completions"
 
