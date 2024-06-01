@@ -21,7 +21,7 @@ vim.o.updatetime = 250
 vim.wo.signcolumn = "yes"
 
 -- Set colorscheme
-vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("catppuccin")
 
 --vim.cmd()
 vim.opt.clipboard = "unnamedplus"
