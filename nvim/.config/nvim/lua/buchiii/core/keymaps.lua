@@ -59,17 +59,6 @@ local mappings = {
 		g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
 		h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
 		n = { "<cmd>Telescope notify<cr>", "Notifications" },
-		r = { "<cmd>Telescope repo<cr>", "Repositories" },
-		s = { "<cmd>Telescope tmux sessions<cr>", "Tmux Sessions" },
-		w = { "<cmd>Telescope tmux windows<cr>", "Tmux windows" },
-		p = { "<cmd>Telescope tmux pane_contents<cr>", "Tmux Panes" },
-		t = { "<cmd>Telescope terraform_doc<cr>", "Terraform" },
-		M = { "<cmd>Telescope terraform_doc modules<cr>", "Terraform Modules" },
-		a = { "<cmd>Telescope terraform_doc full_name=hashicorp/aws<cr>", "Terraform AWS" },
-		G = { "<cmd>Telescope terraform_doc full_name=hashicorp/google<cr>", "Terraform AWS" },
-		k = { "<cmd>Telescope terraform_doc full_name=hashicorp/kubernetes<cr>", "Terraform AWS" },
-		B = { "<cmd>Telescope file_browser<cr>", "File Browser" },
-		m = { "<cmd>Telescope media_files<cr>", "Media Files" },
 	},
 
 	-- git
