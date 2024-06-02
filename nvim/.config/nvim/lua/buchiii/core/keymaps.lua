@@ -59,6 +59,7 @@ local mappings = {
 		g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
 		h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
 		n = { "<cmd>Telescope notify<cr>", "Notifications" },
+		s = { "<cmd>Telescope luasnip<cr>", "Luasnip" },
 	},
 
 	-- git
