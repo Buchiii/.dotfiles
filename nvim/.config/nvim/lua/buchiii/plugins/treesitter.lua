@@ -30,6 +30,7 @@ return {
 				"csv",
 				"dockerfile",
 				"go",
+				"gnuplot",
 				"html",
 				"lua",
 				"markdown",
