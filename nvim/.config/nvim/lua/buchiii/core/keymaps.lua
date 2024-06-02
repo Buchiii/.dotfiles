@@ -54,7 +54,6 @@ local mappings = {
 		name = "Telescope",
 		b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
 		d = { "<cmd>Telescope docker<cr>", "Docker" },
-		R = { "<cmd>Telescope cheat Recache<cr>", "cheat.sh recache" },
 		C = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
 		f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
 		g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
