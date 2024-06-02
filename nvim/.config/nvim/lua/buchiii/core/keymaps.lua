@@ -4,6 +4,10 @@ vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
+--
+-- which-key Settings
+--
+
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return
