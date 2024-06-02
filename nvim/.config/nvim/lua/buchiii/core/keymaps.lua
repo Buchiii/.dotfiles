@@ -40,7 +40,6 @@ local mappings = {
 		p = { "<cmd>cprev<cr>", "Previous" },
 		c = { "<cmd>cclose<cr>", "Close" },
 		o = { "<cmd>copen<cr>", "Open" },
-		d = { "<cmd>Gen DevOps<cr>", "AI DevOps" },
 	},
 
 	-- comments
