@@ -1,6 +1,6 @@
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="wzterm"
 export BROWSER="firefox"
 
 # For QT Themes
