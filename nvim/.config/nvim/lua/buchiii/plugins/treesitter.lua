@@ -32,6 +32,7 @@ return {
 				"go",
 				"gnuplot",
 				"html",
+				"latex",
 				"lua",
 				"markdown",
 				"markdown_inline",
