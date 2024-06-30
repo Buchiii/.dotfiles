@@ -3,8 +3,8 @@ return {
 	-- color_scheme = 'termnial.sexy',
 	color_scheme = "Catppuccin Mocha",
 	enable_tab_bar = false,
-	font_size = 13.0,
-	font = wezterm.font("Ubuntu Mono NerdFont"),
+	font_size = 11.5,
+	font = wezterm.font("Jetbrains Mono"),
 	-- macos_window_background_blur = 40,
 	macos_window_background_blur = 30,
 
