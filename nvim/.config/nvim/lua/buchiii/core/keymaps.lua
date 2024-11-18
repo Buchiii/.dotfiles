@@ -7,144 +7,225 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 --
 -- which-key Settings
 --
+--
 
-local status_ok, which_key = pcall(require, "which-key")
-if not status_ok then
-	return
-end
-
-local opts = {
-	mode = "n", -- NORMAL mode
-	prefix = "<leader>",
-	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-	silent = true, -- use `silent` when creating keymaps
-	noremap = true, -- use `noremap` when creating keymaps
-	nowait = true, -- use `nowait` when creating keymaps
-}
-
-local mappings = {
-
-	-- nvim-tree
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	-- hide searches
-	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	-- getting out of files
-	["w"] = { "<cmd>w!<CR>", "Save" },
-	["q"] = { "<cmd>q!<CR>", "Quit" },
-
-	-- Angry Reviewer, AI (ollama/gen.nvim)
-	a = {
-		name = "AngryReviwer",
-		r = { "<cmd>AngryReviewer<cr>", "AngryReviewer" },
-		n = { "<cmd>cnext<cr>", "Next" },
-		p = { "<cmd>cprev<cr>", "Previous" },
-		c = { "<cmd>cclose<cr>", "Close" },
-		o = { "<cmd>copen<cr>", "Open" },
+local wk = require("which-key")
+wk.add({
+	{ "<leader>a", group = "AngryReviwer", nowait = true, remap = false },
+	{ "<leader>ac", "<cmd>cclose<cr>", desc = "Close", nowait = true, remap = false },
+	{ "<leader>an", "<cmd>cnext<cr>", desc = "Next", nowait = true, remap = false },
+	{ "<leader>ao", "<cmd>copen<cr>", desc = "Open", nowait = true, remap = false },
+	{ "<leader>ap", "<cmd>cprev<cr>", desc = "Previous", nowait = true, remap = false },
+	{ "<leader>ar", "<cmd>AngryReviewer<cr>", desc = "AngryReviewer", nowait = true, remap = false },
+	{ "<leader>c", group = "Comments", nowait = true, remap = false },
+	{
+		"<leader>cn",
+		"<cmd>lua require('todo-comments').jump_next()<cr>",
+		desc = "Next Comment",
+		nowait = true,
+		remap = false,
 	},
-
-	-- comments
-	c = {
-		name = "Comments",
-		n = { "<cmd>lua require('todo-comments').jump_next()<cr>", "Next Comment" },
-		p = { "<cmd>lua require('todo-comments').jump_prev()<cr>", "Previous Comment" },
+	{
+		"<leader>cp",
+		"<cmd>lua require('todo-comments').jump_prev()<cr>",
+		desc = "Previous Comment",
+		nowait = true,
+		remap = false,
 	},
-
-	-- mostly telescope
-	f = {
-		name = "Telescope",
-		b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
-		d = { "<cmd>Telescope docker<cr>", "Docker" },
-		C = { "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Current Buffer Grep" },
-		f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
-		g = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep" },
-		h = { "<cmd>lua require('telescope.builtin').help_tags()<cr>", "Help Tags" },
-		n = { "<cmd>Telescope notify<cr>", "Notifications" },
-		s = { "<cmd>Telescope luasnip<cr>", "Luasnip" },
+	{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explorer", nowait = true, remap = false },
+	{ "<leader>f", group = "Telescope", nowait = true, remap = false },
+	{
+		"<leader>fC",
+		"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>",
+		desc = "Current Buffer Grep",
+		nowait = true,
+		remap = false,
 	},
-
-	-- git
-	g = {
-		name = "Git/Goto/Gitlab",
-		D = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", "Definition" },
-		g = { "<cmd>LazyGit<cr>", "Lazygit" },
-		r = { "<cmd>lua require('gitlab').review()<cr>", "Review" },
-		c = { "<cmd>lua require('gitlab').create_comment()<cr>", "Create Comment" },
-		C = { "<cmd>lua require('gitlab').create_multiline_comment()<cr>", "Create MultilineComment" },
-		S = { "<cmd>lua require('gitlab').create_comment_suggestion()<cr>", "Create Suggestion" },
-		d = { "<cmd>lua require('gitlab').toggle_discussions()<cr>", "Toggle Discussion" },
-		s = { "<cmd>lua require('gitlab').summary()<cr>", "Gitlab Summary" },
-		a = { "<cmd>lua require('gitlab').approve()<cr>", "Approve" },
-		A = { "<cmd>lua require('gitlab').add_assignee()<cr>", "Add Assignee" },
-		da = { "<cmd>lua require('gitlab').delete_assignee()<cr>", "Delete Assignee" },
-		ar = { "<cmd>lua require('gitlab').add_reviewer()<cr>", "Add Reviewer" },
-		dr = { "<cmd>lua require('gitlab').delete_reviewer()<cr>", "Delete Reviewer" },
-		p = { "<cmd>lua require('gitlab').pipeline()<cr>", "Pipeline" },
-		o = { "<cmd>lua require('gitlab').open_in_browser()<cr>", "Open in Browser" },
-		m = { "<cmd>lua require('gitlab').merge()<cr>", "Merge" },
-		md = { "<cmd>lua require('gitlab').move_to_discussion_tree_from_diagnostic()<cr>", "Move to Discussion" },
+	{
+		"<leader>fb",
+		"<cmd>lua require('telescope.builtin').buffers()<cr>",
+		desc = "Buffers",
+		nowait = true,
+		remap = false,
 	},
-
-	-- Lazy
-	l = {
-		name = "Lazy/Latex",
-		l = { "<cmd>Lazy<cr>", "Lazy" },
-		c = { "<cmd>Telescope texsuite newcommands<cr>", "Tex newcommaneds" },
-		L = { "<cmd>Telescope texsuite labels<cr>", "Tex labels" },
-		h = { "<cmd>Telescope texsuite headings<cr>", "Tex headings" },
-		f = { "<cmd>Telescope texsuite frames<cr>", "Tex Frames" },
+	{ "<leader>fd", "<cmd>Telescope docker<cr>", desc = "Docker", nowait = true, remap = false },
+	{
+		"<leader>ff",
+		"<cmd>lua require('telescope.builtin').find_files()<cr>",
+		desc = "Find Files",
+		nowait = true,
+		remap = false,
 	},
-
-	-- mail / himalaya
-	m = {
-		name = "Mail/Minimap",
-		c = { "<cmd>HimalayaCopy<cr>", "Copy Mail" },
-		m = { "<cmd>HimalayaMove<cr>", "Move Mail" },
-		n = { "<cmd>HimalayaNextPage<cr>", "Next Page" },
-		p = { "<cmd>HimalayaPreviousPage<cr>", "Previous Page" },
-		g = { "<cmd>HimalayaFolders<cr>", "Folders" },
-		w = { "<cmd>HimalayaWrite<cr>", "Write Mail" },
-		r = { "<cmd>HimalayaReply<cr>", "Reply" },
-		R = { "<cmd>HimalayaReplyAll<cr>", "Reply All" },
-		f = { "<cmd>HimalayaForward<cr>", "Forward" },
-		a = { "<cmd>HimalayaAttachments<cr>", "Download Attachments" },
-		D = { "<cmd>HimalayaDelete<cr>", "Delete Mail" },
-		M = { "<cmd>MinimapToggle<cr>", "Minimap Toggle" },
+	{
+		"<leader>fg",
+		"<cmd>lua require('telescope.builtin').live_grep()<cr>",
+		desc = "Grep",
+		nowait = true,
+		remap = false,
 	},
-
-	-- snippets
-	s = {
-		name = "Snippets",
-		s = { "<cmd>Telescope luasnip<cr>", "Search" },
+	{
+		"<leader>fh",
+		"<cmd>lua require('telescope.builtin').help_tags()<cr>",
+		desc = "Help Tags",
+		nowait = true,
+		remap = false,
 	},
-
-	-- toggleterm tmux translate
-	t = {
-		name = "Terminal/tmux/translate",
-		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-		r = { "<cmd>Pantran<cr>", "Translate" },
-		rr = { "<cmd>Pantran.motion_translate()<cr>", "Translate Selected Text" },
+	{ "<leader>fn", "<cmd>Telescope notify<cr>", desc = "Notifications", nowait = true, remap = false },
+	{ "<leader>fs", "<cmd>Telescope luasnip<cr>", desc = "Luasnip", nowait = true, remap = false },
+	{ "<leader>g", group = "Git/Goto/Gitlab", nowait = true, remap = false },
+	{
+		"<leader>gA",
+		"<cmd>lua require('gitlab').add_assignee()<cr>",
+		desc = "Add Assignee",
+		nowait = true,
+		remap = false,
 	},
-
-	-- trouble
-	x = {
-		name = "Trouble",
-		x = { "<cmd>TroubleToggle<cr>", "Toggle" },
-		w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace Diagnostics" },
-		d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document Diagnostics" },
-		l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
-		q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
-		r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
+	{
+		"<leader>gC",
+		"<cmd>lua require('gitlab').create_multiline_comment()<cr>",
+		desc = "Create MultilineComment",
+		nowait = true,
+		remap = false,
 	},
-
-	z = {
-		name = "Zen",
-		z = { "<cmd>ZenMode<cr>", "ZenMode" },
+	{
+		"<leader>gD",
+		"<cmd>lua require('goto-preview').goto_preview_definition()<cr>",
+		desc = "Definition",
+		nowait = true,
+		remap = false,
 	},
-}
-
-which_key.register(mappings, opts)
+	{
+		"<leader>gS",
+		"<cmd>lua require('gitlab').create_comment_suggestion()<cr>",
+		desc = "Create Suggestion",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>ga", "<cmd>lua require('gitlab').approve()<cr>", desc = "Approve", nowait = true, remap = false },
+	{
+		"<leader>gar",
+		"<cmd>lua require('gitlab').add_reviewer()<cr>",
+		desc = "Add Reviewer",
+		nowait = true,
+		remap = false,
+	},
+	{
+		"<leader>gc",
+		"<cmd>lua require('gitlab').create_comment()<cr>",
+		desc = "Create Comment",
+		nowait = true,
+		remap = false,
+	},
+	{
+		"<leader>gd",
+		"<cmd>lua require('gitlab').toggle_discussions()<cr>",
+		desc = "Toggle Discussion",
+		nowait = true,
+		remap = false,
+	},
+	{
+		"<leader>gda",
+		"<cmd>lua require('gitlab').delete_assignee()<cr>",
+		desc = "Delete Assignee",
+		nowait = true,
+		remap = false,
+	},
+	{
+		"<leader>gdr",
+		"<cmd>lua require('gitlab').delete_reviewer()<cr>",
+		desc = "Delete Reviewer",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>gg", "<cmd>LazyGit<cr>", desc = "Lazygit", nowait = true, remap = false },
+	{ "<leader>gm", "<cmd>lua require('gitlab').merge()<cr>", desc = "Merge", nowait = true, remap = false },
+	{
+		"<leader>gmd",
+		"<cmd>lua require('gitlab').move_to_discussion_tree_from_diagnostic()<cr>",
+		desc = "Move to Discussion",
+		nowait = true,
+		remap = false,
+	},
+	{
+		"<leader>go",
+		"<cmd>lua require('gitlab').open_in_browser()<cr>",
+		desc = "Open in Browser",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>gp", "<cmd>lua require('gitlab').pipeline()<cr>", desc = "Pipeline", nowait = true, remap = false },
+	{ "<leader>gr", "<cmd>lua require('gitlab').review()<cr>", desc = "Review", nowait = true, remap = false },
+	{ "<leader>gs", "<cmd>lua require('gitlab').summary()<cr>", desc = "Gitlab Summary", nowait = true, remap = false },
+	{ "<leader>h", "<cmd>nohlsearch<CR>", desc = "No Highlight", nowait = true, remap = false },
+	{ "<leader>l", group = "Lazy/Latex", nowait = true, remap = false },
+	{ "<leader>lL", "<cmd>Telescope texsuite labels<cr>", desc = "Tex labels", nowait = true, remap = false },
+	{
+		"<leader>lc",
+		"<cmd>Telescope texsuite newcommands<cr>",
+		desc = "Tex newcommaneds",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>lf", "<cmd>Telescope texsuite frames<cr>", desc = "Tex Frames", nowait = true, remap = false },
+	{ "<leader>lh", "<cmd>Telescope texsuite headings<cr>", desc = "Tex headings", nowait = true, remap = false },
+	{ "<leader>ll", "<cmd>Lazy<cr>", desc = "Lazy", nowait = true, remap = false },
+	{ "<leader>m", group = "Mail/Minimap", nowait = true, remap = false },
+	{ "<leader>mD", "<cmd>HimalayaDelete<cr>", desc = "Delete Mail", nowait = true, remap = false },
+	{ "<leader>mM", "<cmd>MinimapToggle<cr>", desc = "Minimap Toggle", nowait = true, remap = false },
+	{ "<leader>mR", "<cmd>HimalayaReplyAll<cr>", desc = "Reply All", nowait = true, remap = false },
+	{ "<leader>ma", "<cmd>HimalayaAttachments<cr>", desc = "Download Attachments", nowait = true, remap = false },
+	{ "<leader>mc", "<cmd>HimalayaCopy<cr>", desc = "Copy Mail", nowait = true, remap = false },
+	{ "<leader>mf", "<cmd>HimalayaForward<cr>", desc = "Forward", nowait = true, remap = false },
+	{ "<leader>mg", "<cmd>HimalayaFolders<cr>", desc = "Folders", nowait = true, remap = false },
+	{ "<leader>mm", "<cmd>HimalayaMove<cr>", desc = "Move Mail", nowait = true, remap = false },
+	{ "<leader>mn", "<cmd>HimalayaNextPage<cr>", desc = "Next Page", nowait = true, remap = false },
+	{ "<leader>mp", "<cmd>HimalayaPreviousPage<cr>", desc = "Previous Page", nowait = true, remap = false },
+	{ "<leader>mr", "<cmd>HimalayaReply<cr>", desc = "Reply", nowait = true, remap = false },
+	{ "<leader>mw", "<cmd>HimalayaWrite<cr>", desc = "Write Mail", nowait = true, remap = false },
+	{ "<leader>q", "<cmd>q!<CR>", desc = "Quit", nowait = true, remap = false },
+	{ "<leader>s", group = "Snippets", nowait = true, remap = false },
+	{ "<leader>ss", "<cmd>Telescope luasnip<cr>", desc = "Search", nowait = true, remap = false },
+	{ "<leader>t", group = "Terminal/tmux/translate", nowait = true, remap = false },
+	{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Float", nowait = true, remap = false },
+	{
+		"<leader>th",
+		"<cmd>ToggleTerm size=10 direction=horizontal<cr>",
+		desc = "Horizontal",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>tr", "<cmd>Pantran<cr>", desc = "Translate", nowait = true, remap = false },
+	{
+		"<leader>trr",
+		"<cmd>Pantran.motion_translate()<cr>",
+		desc = "Translate Selected Text",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Vertical", nowait = true, remap = false },
+	{ "<leader>w", "<cmd>w!<CR>", desc = "Save", nowait = true, remap = false },
+	{ "<leader>x", group = "Trouble", nowait = true, remap = false },
+	{
+		"<leader>xd",
+		"<cmd>TroubleToggle document_diagnostics<cr>",
+		desc = "Document Diagnostics",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>xl", "<cmd>TroubleToggle loclist<cr>", desc = "Loclist", nowait = true, remap = false },
+	{ "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix", nowait = true, remap = false },
+	{ "<leader>xr", "<cmd>TroubleToggle lsp_references<cr>", desc = "References", nowait = true, remap = false },
+	{
+		"<leader>xw",
+		"<cmd>TroubleToggle workspace_diagnostics<cr>",
+		desc = "Workspace Diagnostics",
+		nowait = true,
+		remap = false,
+	},
+	{ "<leader>xx", "<cmd>TroubleToggle<cr>", desc = "Toggle", nowait = true, remap = false },
+	{ "<leader>z", group = "Zen", nowait = true, remap = false },
+	{ "<leader>zz", "<cmd>ZenMode<cr>", desc = "ZenMode", nowait = true, remap = false },
+})
 
 local map = vim.api.nvim_set_keymap
 local barbar_opts = { noremap = true, silent = true }
