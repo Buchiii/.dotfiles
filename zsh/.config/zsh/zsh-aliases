@@ -99,3 +99,6 @@ alias tree='tre'
 
 # nvim
 alias v='nvim'
+
+# yt-dlp
+alias ytm='yt-dlp --extract-audio'
